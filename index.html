@@ -3,19 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <title>TLD Splitter</title>
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:url" content="http://audreyhaze.github.io/Simple-TLD-Splitter">
-        <meta name="theme-color" content="#FFC0CB">
-        <meta property="og:type" content="website">
-        <meta property="og:site_name" content="audreyhaze.github.io">
-        <meta property="og:title" content="Top Level Domain Splitter">
-        <meta property="og:description" content="A simple tool that splits up a string into all possible TLDs locally.">
-        <meta property="og:image" content="/tools/assets/web.site.png">
         
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
  
 <style> 
 @font-family {
@@ -100,8 +91,6 @@ pre {
 </head>
 <body>
 
-  <a href="assets/tlds-alpha-by-domain.txt" id="tldLink"></a>
-
   <p>Enter a string to split into a Top Level Domain name:</p>
   <input type="text" id="inputString" placeholder="e.x. gamergames">
   <button id="goBtn">Enter</button>
@@ -123,7 +112,7 @@ pre {
   
 <script>
 let tlds = [];
-const TLD_FILE_PATH = document.getElementById('tldLink').getAttribute('href');
+const TLD_FILE_PATH = "tlds-alpha-by-domain.txt";
 fetch(TLD_FILE_PATH)
   .then(res => {
     if (!res.ok) throw new Error('File not found');
